@@ -41,7 +41,7 @@
                             <label class="block-display"><span class="mandatory">*</span>Opening Date:</label>
                             <span class="dateField">
                                 <input type="text" id="grant-opng-date" placeholder="mm/dd/yyyy"
-                                    [(ngModel)]="result.grantCall.openingDate" (keypress)="dateInputRestriction($event)"
+                                    [(ngModel)]="result.grantCall.openingDate" (keypress)="_commonService._keyPress($event, 'date')"
                                     [owlDateTime]="openingDt" class="committeeBox dateWidth" />&nbsp;
                                 <span class="fa fa-calendar fa-large pointer insidePicker" title="open calendar"
                                     [owlDateTimeTrigger]="openingDt"></span>
@@ -52,7 +52,7 @@
                             <label class="block-display"><span class="mandatory">*</span>Closing Date:</label>
                             <span class="dateField">
                                 <input type="text" id="grant-closing-date" placeholder="mm/dd/yyyy"
-                                    [(ngModel)]="result.grantCall.closingDate" (keypress)="dateInputRestriction($event)"
+                                    [(ngModel)]="result.grantCall.closingDate" (keypress)="_commonService._keyPress($event, 'date')"
                                     [owlDateTime]="closingDt" class="committeeBox dateWidth" />&nbsp;
                                 <span class="fa fa-calendar fa-large pointer insidePicker" title="open calendar"
                                     [owlDateTimeTrigger]="closingDt"></span>
@@ -78,7 +78,7 @@
                             <label class="block-display"><span class="mandatory">*</span>Max Budget (SGD):</label>
                             <input id="budgetID" id="grant-budget" type="number" placeholder="" *ngIf="showDataFlagObj.isCurrencyFocusOn == false"
                                 [(ngModel)]="result.grantCall.maximumBudget" class="dateBox committeeBox" />
-                            <span id="budgetAmount" *ngIf="showDataFlagObj.isCurrencyFocusOn == true" (click)="showDataFlagObj.isCurrencyFocusOn = false">{{result?.grantCall?.maximumBudget | currency:'USD':true}}</span>
+                            <span id="budgetAmount" *ngIf="showDataFlagObj.isCurrencyFocusOn == true" (click)="showDataFlagObj.isCurrencyFocusOn = false">{{result?.grantCall?.maximumBudget | currency:'USD'}}</span>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-3">
                             <ng-container class="block-display"><label>Quantum:</label><span class="mandatory" *ngIf="warningMsgObj.stringWarningText != null">( {{warningMsgObj.stringWarningText}} )</span></ng-container>
@@ -467,7 +467,7 @@
     </div>
 </div>
 <!-- WARNING AND ALERT MODAL -->
-<div class="modal fade show mySkinDialog modal-opacity" *ngIf="modalHideAndShowObj.isShowConfirmGoBack == true || modalHideAndShowObj.isShowDeleteModal == true || modalHideAndShowObj.isShowPublishWarningModal == true"
+<div class="modal fade show mySkinDialog" *ngIf="modalHideAndShowObj.isShowConfirmGoBack == true || modalHideAndShowObj.isShowDeleteModal == true || modalHideAndShowObj.isShowPublishWarningModal == true"
     tabindex="-1" id="warningOrAlertModal" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -505,7 +505,7 @@
     </div>
 </div>
 <!-- Saved Successfully modal -->
-<div class="modal fade show mySkinDialog modal-opacity" tabindex="-1" id="saveAlertModal" role="dialog" aria-hidden="true">
+<div class="modal fade show mySkinDialog" tabindex="-1" id="saveAlertModal" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">

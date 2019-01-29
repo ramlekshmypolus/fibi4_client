@@ -472,11 +472,56 @@
 		"secure": false
 	},
 	"/getQuestionnaire": {
-		"target": "http://192.168.1.139:8080/questionnaire",
+		"target": "http://192.168.1.242:8080/fibismu",
 		"secure": false
 	},
 	"/saveQuestionnaire": {
-		"target": "http://192.168.1.139:8080/questionnaire",
+		"target": "http://192.168.1.242:8080/fibismu",
 		"secure": false
-	}
+	},
+	"/editQuestionnaire": {
+      "target": "http://192.168.1.242:8080/fibismu",
+      "secure": false
+    },
+    "/showAllQuestionnaire": {
+      "target": "http://192.168.1.242:8080/fibismu",
+      "secure": false
+    },
+    "/configureQuestionnaire": {
+      "target": "http://192.168.1.242:8080/fibismu",
+      "secure": false
+    },
+    "/createQuestionnaire": {
+      "target": "http://192.168.1.242:8080/fibismu",
+      "secure": false
+    },
+    "/downloadQuesAttachment": {
+      "target": "http://192.168.1.242:8080/fibismu",
+      "secure": false
+	},
+	"/getCodeTableMetaData": {
+      "target": "http://192.168.1.242:8080/fibismu",
+      "secure": false
+    },
+    "/getCodeTable": {
+      "target": "http://192.168.1.242:8080/fibismu",
+      "secure": false
+    },
+    "/updateCodeTableRecord": {
+      "target": "http://192.168.1.242:8080/fibismu",
+      "secure": false
+    },
+    "/deleteCodeTableRecord": {
+      "target": "http://192.168.1.242:8080/fibismu",
+      "secure": false
+    },
+    "/addCodeTableRecord": {
+      "target": "http://192.168.1.242:8080/fibismu",
+      "secure": false
+    },
+    "/downloadAttachment": {
+      "target": "http://192.168.1.242:8080/fibismu",
+      "secure": false
+    }
+
 }

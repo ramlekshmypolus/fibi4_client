@@ -1,8 +1,7 @@
 import { Injectable} from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
 @Injectable()
-export class CommonService {
+export class CommonService {debugger;
 
   baseUrl = '';
 
@@ -40,7 +39,7 @@ export class CommonService {
     proposalTabName: null
   };
 
-  constructor(private _http: HttpClient) { }
+  constructor() { }
   logout() {
     localStorage.clear();
   }
@@ -55,4 +54,12 @@ export class CommonService {
         id.scrollIntoView({behavior : 'smooth'});
     }
   }
+
+  _keyPress(event: any, patternType) {
+    const pattern = patternType === 'date' ? /[0-9\+\-\/\ ]/ : /[0-9\a-zA-Z]/;
+    if (!pattern.test(String.fromCharCode(event.charCode))) {
+        event.preventDefault();
+    }
+  }
+
 }

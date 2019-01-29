@@ -61,43 +61,43 @@
     <div class="row">
       <div class="col-xl-1 col-lg-2 col-md-8 col-sm-8 col-8">
         <label> Proposal# </label> <span>
-          <a routerLink='fibi/proposal/proposalHome' [queryParams]="{proposalId:elasticResultObject.proposal_id}">{{
+          <a [routerLink]="['/fibi/proposal/proposalHome']" [queryParams]="{proposalId:elasticResultObject.proposal_id}">{{
             elasticResultObject?.proposal_id }}</a>
         </span>
       </div>
       <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-4">
         <label>Title</label> <span>
-          <a routerLink='fibi/proposal/proposalHome' [queryParams]="{proposalId:elasticResultObject.proposal_id}">{{
+          <a [routerLink]="['/fibi/proposal/proposalHome']"  [queryParams]="{proposalId:elasticResultObject.proposal_id}">{{
             elasticResultObject?.title }}</a>
         </span>
       </div>
       <div class="col-xl-3 col-lg-3 col-md-8 col-sm-8 col-8">
         <label> PI</label> <span>
-          <a routerLink='fibi/proposal/proposalHome' [queryParams]="{proposalId:elasticResultObject.proposal_id}">{{
+          <a [routerLink]="['/fibi/proposal/proposalHome']" [queryParams]="{proposalId:elasticResultObject.proposal_id}">{{
             elasticResultObject?.full_name}}</a>
         </span>
       </div>
       <div class="col-xl-2 col-lg-1 col-md-4 col-sm-4 col-4">
         <label>Category </label> <span>
-          <a routerLink='fibi/proposal/proposalHome' [queryParams]="{proposalId:elasticResultObject.proposal_id}">{{
+          <a [routerLink]="['/fibi/proposal/proposalHome']" [queryParams]="{proposalId:elasticResultObject.proposal_id}">{{
             elasticResultObject?.category}}</a>
         </span>
       </div>
       <div class="col-xl-2 col-lg-2 col-md-8 col-sm-8 col-8">
         <label> Type </label> <span>
-          <a routerLink='fibi/proposal/proposalHome' [queryParams]="{proposalId:elasticResultObject.proposal_id}">{{
+          <a [routerLink]="['/fibi/proposal/proposalHome']" [queryParams]="{proposalId:elasticResultObject.proposal_id}">{{
             elasticResultObject?.type}}</a>
         </span>
       </div>
       <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-4">
         <label> Status </label> <span>
-          <a routerLink='fibi/proposal/proposalHome' [queryParams]="{proposalId:elasticResultObject.proposal_id}">{{
+          <a [routerLink]="['/fibi/proposal/proposalHome']" [queryParams]="{proposalId:elasticResultObject.proposal_id}">{{
             elasticResultObject?.status}}</a>
         </span>
       </div>
       <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-4">
         <label> Sponsor </label> <span>
-          <a routerLink='fibi/proposal/proposalHome' [queryParams]="{proposalId:elasticResultObject.proposal_id}">{{
+          <a [routerLink]="['/fibi/proposal/proposalHome']" [queryParams]="{proposalId:elasticResultObject.proposal_id}">{{
             elasticResultObject?.sponsor}}</a>
         </span>
       </div>
@@ -206,7 +206,7 @@
   </div>
 </div>
 <!-- NO CREATE PERMISSION MODAL -->
-<div class="modal fade show mySkinDialog modal-opacity" *ngIf="isShowNoCreateProposalModal" tabindex="-1" id="denyPermissionModal" role="dialog" aria-hidden="true">
+<div class="modal fade show mySkinDialog" *ngIf="isShowNoCreateProposalModal" tabindex="-1" id="denyPermissionModal" role="dialog" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -228,7 +228,7 @@
 
 <!-- Route log modal-->
 <div class="modal fade show mySkinDialog" tabindex="-1" id="routeLogModal-dashboard" *ngIf="isRoutelogOpened" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">Route Log</h5>

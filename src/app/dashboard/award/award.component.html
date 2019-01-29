@@ -144,7 +144,7 @@
         <td>{{awardDetails.fullName}}</td>
         <td>
           <ul class="actionButtonGroup">
-            <li><a title="Open {{awardDetails.awardNumber}}" id="open-award-btn" routerLink='fibi/award' [queryParams]={awardId:awardDetails.awardId}><i
+            <li><a title="Open {{awardDetails.awardNumber}}" id="open-award-btn" [routerLink]="['/fibi/award']" [queryParams]={awardId:awardDetails.awardId}><i
                   class="fa fa-eye pointer"></i> </a></li>
           </ul>
         </td>

@@ -39,7 +39,7 @@
                     <td>
                       <ul class="actionButtonGroup">
                         <li><a title="Open {{proposalDetails?.proposalNumber}}" href="#/proposal/proposalHome?proposalId={{proposalDetails?.proposalNumber}}"
-                          [routerLink]="['/proposal/proposalHome']" [queryParams]="{proposalId :proposalDetails?.proposalNumber}"><i
+                          [routerLink]="['/fibi/proposal/proposalHome']" [queryParams]="{proposalId :proposalDetails?.proposalNumber}"><i
                             class="fa fa-eye"></i> </a>
                         </li>
                       </ul>
@@ -91,7 +91,7 @@
                       <td>{{awardDetails?.total_cost}}</td>
                       <td>
                         <ul class="actionButtonGroup">
-                          <li><a title="Open {{awardDetails?.awardNumber}}" [routerLink]="'/award'" [queryParams]="{awardId:awardDetails?.awardId}"><i
+                          <li><a title="Open {{awardDetails?.awardNumber}}" [routerLink]="['/fibi/award']" [queryParams]="{awardId:awardDetails?.awardId}"><i
                                 class="fa fa-eye"></i> </a>
                           </li>
                         </ul>
@@ -140,7 +140,7 @@
                     <td>
                       <ul class="actionButtonGroup">
                         <li>
-                          <a title="Open {{awardDetails[0]}}" [routerLink]="['/award']" [queryParams]="{awardId:awardDetails[1]}"><i
+                          <a title="Open {{awardDetails[0]}}" [routerLink]="['/fibi/award']" [queryParams]="{awardId:awardDetails[1]}"><i
                             class="fa fa-eye"></i></a>
                         </li>
                       </ul>
@@ -192,7 +192,7 @@
                     <td>
                       <ul class="actionButtonGroup">
                         <li><a title="Open {{proposalDetails[0]}}" href="#/proposal/proposalHome?proposalId={{proposalDetails[0]}}"
-                            [routerLink]="['/proposal/proposalHome']" [queryParams]="{proposalId :proposalDetails[0]}"><i class="fa fa-eye"></i>
+                          [routerLink]="['/fibi/proposal/proposalHome']" [queryParams]="{proposalId :proposalDetails[0]}"><i class="fa fa-eye"></i>
                           </a>
                         </li>
                       </ul>

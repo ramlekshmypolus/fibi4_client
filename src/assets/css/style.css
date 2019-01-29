@@ -217,7 +217,7 @@ header a:hover {
 	font-weight: 300;
 }
 
-.tabs>li {
+.tabs>li, .ib-display {
 	display: inline-block;
 }
 

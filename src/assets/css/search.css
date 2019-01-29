@@ -967,3 +967,7 @@ table.tableSection th, table.tableSection td {
   .margin-IP {
 	margin-right: 95px;
   }
+  file-drop .drop-zone {
+    height: 125px!important;
+	border: 2px dotted #00bcd4!important;
+}
